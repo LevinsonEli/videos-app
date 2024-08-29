@@ -21,7 +21,7 @@ This Flask application provides a RESTful API for managing video resources, inte
   - `GET /metrics`: Expose Prometheus metrics for monitoring.
 
 ## Prerequisites:
-  * A Kubernetes cluster with ArgoCD installed. [Solution here](https://gitlab.com/your-repo/argoCD-installation).
-  * Infrastructure deployed to Kubernetes. [Solution here](https://gitlab.com/your-repo/infrastructure-deployment).
-  * The Videos Helm project added to ArgoCD. [Solution here](https://gitlab.com/your-repo/videos-helm-project).
+  * A Kubernetes cluster with ArgoCD installed. [Solution here](https://github.com/LevinsonEli/eks-terraform).
+  * Infrastructure deployed to Kubernetes. [Solution here](https://github.com/LevinsonEli/k8s-infra-apps).
+  * The Videos Helm project added to ArgoCD. [Solution here](https://github.com/LevinsonEli/helm-videos-app).
   * A Jenkins machine set up for CI/CD.
