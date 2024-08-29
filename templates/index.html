@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video API</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Video Management</h1>
+    <div>
+        <h2>Create Video</h2>
+        <form id="create-form">
+            <input type="text" id="title" placeholder="Title" required>
+            <input type="text" id="description" placeholder="Description">
+            <button type="submit">Create Video</button>
+        </form>
+    </div>
+    <div>
+        <h2>All Videos</h2>
+        <button onclick="fetchVideos()">Load Videos</button>
+        <ul id="video-list"></ul>
+    </div>
+    <div>
+        <h2>Update/Delete Video</h2>
+        <input type="text" id="update-id" placeholder="Video ID">
+        <input type="text" id="update-title" placeholder="Title">
+        <input type="text" id="update-description" placeholder="Description">
+        <button onclick="updateVideo()">Update Video</button>
+        <button onclick="deleteVideo()">Delete Video</button>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
+

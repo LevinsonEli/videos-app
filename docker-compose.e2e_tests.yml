@@ -1,0 +1,30 @@
+services:
+  mongodb:
+    image: mongo:7.0.13-rc1-jammy
+    container_name: mongodb
+    # ports:
+    #   - "27017:${MONGO_PORT_INTERNAL}"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - backend
+
+  videos-app:
+    build:
+      context: .
+    container_name: videos-app
+    ports:
+      - "5000:${VIDEOS_APP_PORT_INTERNAL}"
+    depends_on:
+      - mongodb
+    volumes:
+      - .env:/app/.env
+    networks:
+      - backend
+
+volumes:
+  mongodb_data:
+
+networks:
+  backend:
+    driver: bridge
